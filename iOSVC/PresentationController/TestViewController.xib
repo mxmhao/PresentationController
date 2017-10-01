@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestViewController" customModule="iOSVC" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9PY-4Z-deh">
+                    <rect key="frame" x="283" y="0.0" width="92" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="点击使我消失"/>
+                    <connections>
+                        <action selector="dismissAction:" destination="-1" eventType="touchUpInside" id="g62-Hd-gzJ"/>
+                    </connections>
+                </button>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="qgK-w6-Cfz">
+                    <rect key="frame" x="0.0" y="30" width="375" height="637"/>
+                    <date key="date" timeIntervalSinceReferenceDate="518871193.73770702">
+                        <!--2017-06-11 10:53:13 +0000-->
+                    </date>
+                </datePicker>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="9PY-4Z-deh" secondAttribute="trailing" id="cFg-GT-rlv"/>
+                <constraint firstAttribute="bottom" secondItem="qgK-w6-Cfz" secondAttribute="bottom" id="dQC-Ke-dNq"/>
+                <constraint firstItem="qgK-w6-Cfz" firstAttribute="top" secondItem="9PY-4Z-deh" secondAttribute="bottom" id="ic7-hz-ByF"/>
+                <constraint firstAttribute="trailing" secondItem="qgK-w6-Cfz" secondAttribute="trailing" id="oxb-Fq-XdR"/>
+                <constraint firstItem="9PY-4Z-deh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vhg-sW-ygS"/>
+                <constraint firstItem="qgK-w6-Cfz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="x60-vf-LZx"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
