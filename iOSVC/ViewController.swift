@@ -27,7 +27,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         vc.popoverPresentationController?.barButtonItem = rightItem
         //这个和上面的相同，这两个必须同时使用？
 //        vc.popoverPresentationController?.sourceRect = //
-//        vc.popoverPresentationController?.sourceView = 
+//        vc.popoverPresentationController?.sourceView =
         */
         
         
@@ -87,12 +87,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         print("--> \(vc.modalPresentationStyle == .custom) -- \(UIModalPresentationStyle.custom.rawValue)")
         
         self.present(vc, animated: true)
+        print("modalPresentationStyle: \(vc.modalPresentationStyle.rawValue)\nmodalTransitionStyle: \(vc.modalTransitionStyle.rawValue)")
         
         vc.transitionCoordinator?.animate(alongsideTransition: { (UIViewControllerTransitionCoordinatorContext) in
             print(#line, UIViewControllerTransitionCoordinatorContext.transitionDuration)//0.404秒
         })
         
-    vc.presentationController!.presentingViewController.transitionCoordinator?.animate(alongsideTransition: { (UIViewControllerTransitionCoordinatorContext) in
+        vc.presentationController!.presentingViewController.transitionCoordinator?.animate(alongsideTransition: { (UIViewControllerTransitionCoordinatorContext) in
             print(#line, UIViewControllerTransitionCoordinatorContext.transitionDuration)
         })
     }
@@ -115,7 +116,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         vc.transitionCoordinator?.animate(alongsideTransition: { (UIViewControllerTransitionCoordinatorContext) in
             print(#line, UIViewControllerTransitionCoordinatorContext.transitionDuration)
         })
-    vc.presentationController!.presentingViewController.transitionCoordinator?.animate(alongsideTransition: { (UIViewControllerTransitionCoordinatorContext) in
+        vc.presentationController!.presentingViewController.transitionCoordinator?.animate(alongsideTransition: { (UIViewControllerTransitionCoordinatorContext) in
             print(#line, UIViewControllerTransitionCoordinatorContext.transitionDuration)
         })
     }

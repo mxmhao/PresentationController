@@ -81,6 +81,7 @@ class XMAlertPresentationController: UIPresentationController {
         view?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissAction)))//给一个点击退出手势，仿UIAlertController
         view?.backgroundColor = UIColor(white: 0, alpha: 0)    //这个一定要的，不然下面的动画就没效果了
         containerView?.addSubview(view!)
+        print("class: \(String(describing: containerView))")
         
         bgView = UIView(frame: (containerView?.bounds)!)
         bgView?.isUserInteractionEnabled = false
@@ -141,7 +142,7 @@ class XMAlertPresentationController: UIPresentationController {
         presentedView?.frame = frameOfPresentedViewInContainerView  //这行是必须的
     }
 
-    func dismissAction() {
+    @objc func dismissAction() {
         presentedViewController.dismiss(animated: true)
     }
 }
